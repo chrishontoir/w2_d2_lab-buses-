@@ -16,4 +16,12 @@ class Bus
     return @passengers.length
   end
 
+  def add_passenger(person)
+    @passengers.push(person)
+  end
+
+  def remove_passenger(person)
+    @passengers.delete(person)
+  end
+
 end
