@@ -18,7 +18,6 @@ class Bus
 
   def add_passenger(person)
     @passengers.push(person)
-    p @passengers
   end
 
   def remove_passenger(person)

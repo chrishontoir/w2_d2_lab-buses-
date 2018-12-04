@@ -4,7 +4,7 @@ require_relative('../bus')
 require_relative('../person')
 require_relative('../bus_stop')
 
-class BusTest < MiniTest::Test
+class BusStopTest < MiniTest::Test
 
   def setup
     @bus = Bus.new("22", "Ocean Terminal", [@person1, @person2, @person3])
@@ -18,42 +18,6 @@ class BusTest < MiniTest::Test
 
     @bus_stop = BusStop.new("Marchmont", [@person4, @person5, @person6])
 
-
-    # @stop1 = [@person1, @person2]
-    # @stop2 = [@person3, @person4]
-    # @stop3 = [@person5, @person6]
-
-  end
-
-  def test_return_route
-    assert_equal("22", @bus.route_no)
-  end
-
-  def test_return_destination
-    assert_equal("Ocean Terminal", @bus.destination)
-  end
-
-  def test_bus_drive
-    assert_equal("Brum brum", @bus.bus_drive)
-  end
-
-  def test_return_passenger_count
-    assert_equal(3, @bus.passenger_count)
-  end
-
-  def test_add_passenger
-    @bus.add_passenger(@person1)
-    assert_equal(4, @bus.passenger_count)
-  end
-
-  def test_remove_passenger
-    @bus.remove_passenger(@person2)
-    assert_equal(3, @bus.passenger_count)
-  end
-
-  def test_empty_bus
-    @bus.empty_bus
-    assert_equal(0, @bus.passenger_count)
   end
 
   def test_add_person_to_queue
