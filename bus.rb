@@ -18,6 +18,7 @@ class Bus
 
   def add_passenger(person)
     @passengers.push(person)
+    p @passengers
   end
 
   def remove_passenger(person)
@@ -26,5 +27,11 @@ class Bus
 
   def empty_bus
     @passengers = []
+  end
+
+  def add_all_passengers(array)
+    for person in array
+      @passengers.push(person)
+    end
   end
 end

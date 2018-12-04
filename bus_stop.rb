@@ -15,4 +15,13 @@ class BusStop
     return @queue.length
   end
 
+  # def add_all_passengers_to_bus()
+  #   for person in @queue
+  #     @bus.add_passenger(person)
+  # end
+
+  # def add_all_people(bus_stop)
+  #   @bus.add_passenger()
+  # end
+
 end
